@@ -18,7 +18,6 @@
             margin: 0 auto;
         }
         page{
-            font-family: SimHei;
             display: block;
             margin: 0;
         }

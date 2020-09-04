@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.modelpdf.mapper.DeptEmpMapper">
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.DeptEmp">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <id column="dept_no" jdbcType="CHAR" property="dept_no" />
+    <result column="from_date" jdbcType="DATE" property="from_date" />
+    <result column="to_date" jdbcType="DATE" property="to_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from dept_emp
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.DeptEmp">
+    insert into dept_emp (emp_no, dept_no, from_date, 
+      to_date)
+    values (#{emp_no,jdbcType=INTEGER}, #{dept_no,jdbcType=CHAR}, #{from_date,jdbcType=DATE}, 
+      #{to_date,jdbcType=DATE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.DeptEmp">
+    update dept_emp
+    set from_date = #{from_date,jdbcType=DATE},
+      to_date = #{to_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select emp_no, dept_no, from_date, to_date
+    from dept_emp
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, dept_no, from_date, to_date
+    from dept_emp
+  </select>
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.DeptEmp">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <id column="dept_no" jdbcType="CHAR" property="dept_no" />
+    <result column="from_date" jdbcType="DATE" property="from_date" />
+    <result column="to_date" jdbcType="DATE" property="to_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from dept_emp
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.DeptEmp">
+    insert into dept_emp (emp_no, dept_no, from_date, 
+      to_date)
+    values (#{emp_no,jdbcType=INTEGER}, #{dept_no,jdbcType=CHAR}, #{from_date,jdbcType=DATE}, 
+      #{to_date,jdbcType=DATE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.DeptEmp">
+    update dept_emp
+    set from_date = #{from_date,jdbcType=DATE},
+      to_date = #{to_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select emp_no, dept_no, from_date, to_date
+    from dept_emp
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and dept_no = #{dept_no,jdbcType=CHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, dept_no, from_date, to_date
+    from dept_emp
+  </select>
+</mapper>

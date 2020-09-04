@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.modelpdf.mapper.EmployeesMapper">
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Employees">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <result column="birth_date" jdbcType="DATE" property="birth_date" />
+    <result column="first_name" jdbcType="VARCHAR" property="first_name" />
+    <result column="last_name" jdbcType="VARCHAR" property="last_name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="hire_date" jdbcType="DATE" property="hire_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Employees">
+    insert into employees (emp_no, birth_date, first_name, 
+      last_name, gender, hire_date
+      )
+    values (#{emp_no,jdbcType=INTEGER}, #{birth_date,jdbcType=DATE}, #{first_name,jdbcType=VARCHAR}, 
+      #{last_name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, #{hire_date,jdbcType=DATE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Employees">
+    update employees
+    set birth_date = #{birth_date,jdbcType=DATE},
+      first_name = #{first_name,jdbcType=VARCHAR},
+      last_name = #{last_name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      hire_date = #{hire_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+  </select>
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Employees">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <result column="birth_date" jdbcType="DATE" property="birth_date" />
+    <result column="first_name" jdbcType="VARCHAR" property="first_name" />
+    <result column="last_name" jdbcType="VARCHAR" property="last_name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="hire_date" jdbcType="DATE" property="hire_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Employees">
+    insert into employees (emp_no, birth_date, first_name, 
+      last_name, gender, hire_date
+      )
+    values (#{emp_no,jdbcType=INTEGER}, #{birth_date,jdbcType=DATE}, #{first_name,jdbcType=VARCHAR}, 
+      #{last_name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, #{hire_date,jdbcType=DATE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Employees">
+    update employees
+    set birth_date = #{birth_date,jdbcType=DATE},
+      first_name = #{first_name,jdbcType=VARCHAR},
+      last_name = #{last_name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      hire_date = #{hire_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+  </select>
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Employees">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <result column="birth_date" jdbcType="DATE" property="birth_date" />
+    <result column="first_name" jdbcType="VARCHAR" property="first_name" />
+    <result column="last_name" jdbcType="VARCHAR" property="last_name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="hire_date" jdbcType="DATE" property="hire_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Employees">
+    insert into employees (emp_no, birth_date, first_name, 
+      last_name, gender, hire_date
+      )
+    values (#{emp_no,jdbcType=INTEGER}, #{birth_date,jdbcType=DATE}, #{first_name,jdbcType=VARCHAR}, 
+      #{last_name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, #{hire_date,jdbcType=DATE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Employees">
+    update employees
+    set birth_date = #{birth_date,jdbcType=DATE},
+      first_name = #{first_name,jdbcType=VARCHAR},
+      last_name = #{last_name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      hire_date = #{hire_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+  </select>
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Employees">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <result column="birth_date" jdbcType="DATE" property="birth_date" />
+    <result column="first_name" jdbcType="VARCHAR" property="first_name" />
+    <result column="last_name" jdbcType="VARCHAR" property="last_name" />
+    <result column="gender" jdbcType="CHAR" property="gender" />
+    <result column="hire_date" jdbcType="DATE" property="hire_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Employees">
+    insert into employees (emp_no, birth_date, first_name, 
+      last_name, gender, hire_date
+      )
+    values (#{emp_no,jdbcType=INTEGER}, #{birth_date,jdbcType=DATE}, #{first_name,jdbcType=VARCHAR}, 
+      #{last_name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, #{hire_date,jdbcType=DATE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Employees">
+    update employees
+    set birth_date = #{birth_date,jdbcType=DATE},
+      first_name = #{first_name,jdbcType=VARCHAR},
+      last_name = #{last_name,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=CHAR},
+      hire_date = #{hire_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, birth_date, first_name, last_name, gender, hire_date
+    from employees
+  </select>
+</mapper>

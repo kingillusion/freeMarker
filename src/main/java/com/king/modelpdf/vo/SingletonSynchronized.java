@@ -44,7 +44,7 @@ public class SingletonSynchronized {
         //线程体 目的为了获取实例对象
         Callable<SingletonSynchronized> calls = ()->{return SingletonSynchronized.getInstance();};
 
-        //启动线程 创建两个线程
+        //启动线程池 创建两个线程
         ExecutorService service = Executors.newFixedThreadPool(2);
 
         //提交线程 返回Future对象
@@ -59,6 +59,7 @@ public class SingletonSynchronized {
         System.out.println(s1);
         System.out.println(s2);
 
+        //关闭线程池
         service.shutdown();
     }
 }

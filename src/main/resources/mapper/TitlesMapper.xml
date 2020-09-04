@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.king.modelpdf.mapper.TitlesMapper">
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Titles">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <id column="title" jdbcType="VARCHAR" property="title" />
+    <id column="from_date" jdbcType="DATE" property="from_date" />
+    <result column="to_date" jdbcType="DATE" property="to_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from titles
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Titles">
+    insert into titles (emp_no, title, from_date, 
+      to_date)
+    values (#{emp_no,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{from_date,jdbcType=DATE}, 
+      #{to_date,jdbcType=DATE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Titles">
+    update titles
+    set to_date = #{to_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select emp_no, title, from_date, to_date
+    from titles
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, title, from_date, to_date
+    from titles
+  </select>
+  <resultMap id="BaseResultMap" type="com.king.modelpdf.entity.Titles">
+    <id column="emp_no" jdbcType="INTEGER" property="emp_no" />
+    <id column="title" jdbcType="VARCHAR" property="title" />
+    <id column="from_date" jdbcType="DATE" property="from_date" />
+    <result column="to_date" jdbcType="DATE" property="to_date" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    delete from titles
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </delete>
+  <insert id="insert" parameterType="com.king.modelpdf.entity.Titles">
+    insert into titles (emp_no, title, from_date, 
+      to_date)
+    values (#{emp_no,jdbcType=INTEGER}, #{title,jdbcType=VARCHAR}, #{from_date,jdbcType=DATE}, 
+      #{to_date,jdbcType=DATE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.king.modelpdf.entity.Titles">
+    update titles
+    set to_date = #{to_date,jdbcType=DATE}
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="map" resultMap="BaseResultMap">
+    select emp_no, title, from_date, to_date
+    from titles
+    where emp_no = #{emp_no,jdbcType=INTEGER}
+      and title = #{title,jdbcType=VARCHAR}
+      and from_date = #{from_date,jdbcType=DATE}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select emp_no, title, from_date, to_date
+    from titles
+  </select>
+</mapper>

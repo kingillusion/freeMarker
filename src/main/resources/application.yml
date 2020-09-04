@@ -6,3 +6,12 @@ spring:
       exclude: WEB-INF/**
   freemarker:
     cache: false    #页面不加载缓存，修改即时生效
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/employees?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+mybatis:
+  #config-locations: mybatis/mybatis-config.xml
+  mapper-locations: com/king/modelpdf/mapper/*.xml
+  type-aliases-package: com.king.modelpdf.mapper
