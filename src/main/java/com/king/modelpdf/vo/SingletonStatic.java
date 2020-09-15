@@ -21,9 +21,9 @@ public class SingletonStatic {
             Properties pro = new Properties();
             //src文件夹才能使用类加载器
             //pro.load(Singleton.class.getClassLoader().getResourceAsStream("properties.properties"));
-            inputStreamReader = new InputStreamReader(SingletonStatic.class.getClassLoader().getResourceAsStream("properties.properties"),"UTF-8");
+            inputStreamReader = new InputStreamReader(SingletonStatic.class.getClassLoader().getResourceAsStream("properties.yml"),"UTF-8");
             pro.load(inputStreamReader);
-            INCETANCE = new SingletonStatic(pro.getProperty("info"));
+            INCETANCE = new SingletonStatic(pro.getProperty("mes"));
         }catch (IOException e){
             throw new RuntimeException();
         }
@@ -43,9 +43,7 @@ public class SingletonStatic {
 
     @Override
     public String toString() {
-        return "Singleton{" +
-                "info='" + info + '\'' +
-                '}';
+        return  info;
     }
 
     public static void main(String[] args) {
