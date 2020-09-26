@@ -15,3 +15,7 @@ mybatis:
   #config-locations: mybatis/mybatis-config.xml
   mapper-locations: com/king/modelpdf/mapper/*.xml
   type-aliases-package: com.king.modelpdf.mapper
+person:
+  name: 张三
+  age: 23
+  pets: [dog,cat,elephant]
